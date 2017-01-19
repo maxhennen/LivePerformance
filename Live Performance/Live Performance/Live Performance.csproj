@@ -46,13 +46,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\BestellingSQLContext.cs" />
+    <Compile Include="Data\Database.cs" />
+    <Compile Include="Data\IngrediëntenSQLContext.cs" />
+    <Compile Include="Data\ProductenSQLContext.cs" />
+    <Compile Include="Data\TestData.cs" />
+    <Compile Include="Domain Classes\Bestelling.cs" />
+    <Compile Include="Domain Classes\Ingrediënten.cs" />
     <Compile Include="Domain Classes\Klant.cs" />
+    <Compile Include="Domain Classes\OverigeProducten.cs" />
+    <Compile Include="Domain Classes\Pizza.cs" />
+    <Compile Include="Domain Classes\Producten.cs" />
     <Compile Include="Forms\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\IBestellingSQLContext.cs" />
+    <Compile Include="Interfaces\IIngrediëntenSQLContext.cs" />
+    <Compile Include="Interfaces\IProductenSQLContext.cs" />
+    <Compile Include="Interfaces\ITestInterface.cs" />
+    <Compile Include="Logic\BestellingRepository.cs" />
+    <Compile Include="Logic\IngrediëntenRepository.cs" />
+    <Compile Include="Logic\ProductenRepository.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\Form1.resx">
@@ -80,11 +97,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Data\" />
-    <Folder Include="Interfaces\" />
-    <Folder Include="Logic\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

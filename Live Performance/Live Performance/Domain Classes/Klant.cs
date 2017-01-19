@@ -8,13 +8,17 @@ namespace Live_Performance.Domain_Classes
 {
     public class Klant
     {
-        public int KlantNummer { get; private set; }
-        public string Naam { get; private set; }
-        public string Adres { get; private set; }
+        public int KlantNummer { get; set; }
+        public string Naam { get; set; }
+        public string Adres { get; set; }
 
-        public Klant(int klantNummer, string naam, string adres)
+        public Klant(int klantnummer)
         {
-            KlantNummer = klantNummer;
+            KlantNummer = klantnummer;
+        }
+
+        public Klant(string naam, string adres)
+        {
             Naam = naam;
             Adres = adres;
         }

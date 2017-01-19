@@ -45,19 +45,14 @@
             this.nUDLengteDiameter = new System.Windows.Forms.NumericUpDown();
             this.lbProducten = new System.Windows.Forms.ListBox();
             this.lbIngrediënten = new System.Windows.Forms.ListBox();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.cblBodemsoort = new System.Windows.Forms.CheckedListBox();
             this.clbOphalen = new System.Windows.Forms.CheckedListBox();
             this.lblVorm = new System.Windows.Forms.Label();
             this.tbAdres = new System.Windows.Forms.TextBox();
             this.tbNaam = new System.Windows.Forms.TextBox();
-            this.tbKlantNummer = new System.Windows.Forms.TextBox();
-            this.cblGluten = new System.Windows.Forms.CheckedListBox();
             this.lblGluten = new System.Windows.Forms.Label();
             this.lblProductenAanpassen = new System.Windows.Forms.Label();
             this.lblSoortAanpassen = new System.Windows.Forms.Label();
             this.cbAanpassen = new System.Windows.Forms.ComboBox();
-            this.clbAanpassen = new System.Windows.Forms.CheckedListBox();
             this.tbNaamProduct = new System.Windows.Forms.TextBox();
             this.tbInkoop = new System.Windows.Forms.TextBox();
             this.tbVerkoop = new System.Windows.Forms.TextBox();
@@ -65,10 +60,8 @@
             this.btnAanpassen = new System.Windows.Forms.Button();
             this.btnToevoegen = new System.Windows.Forms.Button();
             this.btnVerwijderen = new System.Windows.Forms.Button();
-            this.clbHalal = new System.Windows.Forms.CheckedListBox();
             this.lblHalal = new System.Windows.Forms.Label();
             this.lblVeganistisch = new System.Windows.Forms.Label();
-            this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
             this.nUDLengteDiaAanpassen = new System.Windows.Forms.NumericUpDown();
             this.nUDDiepteAanpassen = new System.Windows.Forms.NumericUpDown();
             this.nUDBreedteAanpassen = new System.Windows.Forms.NumericUpDown();
@@ -80,12 +73,29 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.btnWinstOmzetBekijken = new System.Windows.Forms.Button();
             this.lblWinstOmzet = new System.Windows.Forms.Label();
+            this.lblGebruiker = new System.Windows.Forms.Label();
+            this.clbGebruiker = new System.Windows.Forms.CheckedListBox();
+            this.lblBodemsoortAanpassen = new System.Windows.Forms.Label();
+            this.lblGlutenAanpassen = new System.Windows.Forms.Label();
+            this.lblBodemVormAanpassen = new System.Windows.Forms.Label();
+            this.lblAlcohol = new System.Windows.Forms.Label();
+            this.clbBodemVorm = new System.Windows.Forms.CheckedListBox();
+            this.cblGluten = new System.Windows.Forms.CheckedListBox();
+            this.cblBodemsoort = new System.Windows.Forms.CheckedListBox();
+            this.clbHalalAlcohol = new System.Windows.Forms.CheckedListBox();
+            this.clbVega = new System.Windows.Forms.CheckedListBox();
+            this.clbAanpassen = new System.Windows.Forms.CheckedListBox();
+            this.clbBodemAanpassen = new System.Windows.Forms.CheckedListBox();
+            this.nUDKlantnummer = new System.Windows.Forms.NumericUpDown();
+            this.lblKlantnummer = new System.Windows.Forms.Label();
+            this.clbVormAanpassen = new System.Windows.Forms.CheckedListBox();
             ((System.ComponentModel.ISupportInitialize)(this.nUDBreedte)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUDDiepte)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUDLengteDiameter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUDLengteDiaAanpassen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUDDiepteAanpassen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUDBreedteAanpassen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nUDKlantnummer)).BeginInit();
             this.SuspendLayout();
             // 
             // lblBestelling
@@ -101,31 +111,18 @@
             // cbOverigeProducten
             // 
             this.cbOverigeProducten.FormattingEnabled = true;
-            this.cbOverigeProducten.Items.AddRange(new object[] {
-            "Kleine salade",
-            "Grote salade",
-            "Frisdrank",
-            "Bier",
-            "Water"});
             this.cbOverigeProducten.Location = new System.Drawing.Point(12, 68);
             this.cbOverigeProducten.Name = "cbOverigeProducten";
-            this.cbOverigeProducten.Size = new System.Drawing.Size(121, 24);
+            this.cbOverigeProducten.Size = new System.Drawing.Size(191, 24);
             this.cbOverigeProducten.TabIndex = 1;
             this.cbOverigeProducten.Text = "Producten";
             // 
             // cbPizza
             // 
             this.cbPizza.FormattingEnabled = true;
-            this.cbPizza.Items.AddRange(new object[] {
-            "Margherita, 25cm",
-            "Margherita, 30cm",
-            "Calzone, 25cm",
-            "Hawaï, 20cm",
-            "Giulia, 15x20x30cm",
-            "Studento, 20x22cm"});
             this.cbPizza.Location = new System.Drawing.Point(12, 38);
             this.cbPizza.Name = "cbPizza";
-            this.cbPizza.Size = new System.Drawing.Size(121, 24);
+            this.cbPizza.Size = new System.Drawing.Size(191, 24);
             this.cbPizza.TabIndex = 2;
             this.cbPizza.Text = "Pizza";
             // 
@@ -134,7 +131,7 @@
             this.cbIngrediënten.FormattingEnabled = true;
             this.cbIngrediënten.Location = new System.Drawing.Point(12, 405);
             this.cbIngrediënten.Name = "cbIngrediënten";
-            this.cbIngrediënten.Size = new System.Drawing.Size(121, 24);
+            this.cbIngrediënten.Size = new System.Drawing.Size(247, 24);
             this.cbIngrediënten.TabIndex = 3;
             // 
             // btmBestellingOpslaan
@@ -145,24 +142,27 @@
             this.btmBestellingOpslaan.TabIndex = 4;
             this.btmBestellingOpslaan.Text = "Bestelling Opslaan";
             this.btmBestellingOpslaan.UseVisualStyleBackColor = true;
+            this.btmBestellingOpslaan.Click += new System.EventHandler(this.btmBestellingOpslaan_Click);
             // 
             // btnProducten
             // 
-            this.btnProducten.Location = new System.Drawing.Point(139, 68);
+            this.btnProducten.Location = new System.Drawing.Point(209, 69);
             this.btnProducten.Name = "btnProducten";
             this.btnProducten.Size = new System.Drawing.Size(99, 23);
             this.btnProducten.TabIndex = 5;
             this.btnProducten.Text = "Toevoegen";
             this.btnProducten.UseVisualStyleBackColor = true;
+            this.btnProducten.Click += new System.EventHandler(this.btnProducten_Click);
             // 
             // btnStndPizza
             // 
-            this.btnStndPizza.Location = new System.Drawing.Point(139, 39);
+            this.btnStndPizza.Location = new System.Drawing.Point(209, 39);
             this.btnStndPizza.Name = "btnStndPizza";
             this.btnStndPizza.Size = new System.Drawing.Size(99, 23);
             this.btnStndPizza.TabIndex = 6;
             this.btnStndPizza.Text = "Toevoegen";
             this.btnStndPizza.UseVisualStyleBackColor = true;
+            this.btnStndPizza.Click += new System.EventHandler(this.btnStndPizza_Click);
             // 
             // btnPizzaOpslaan
             // 
@@ -172,6 +172,7 @@
             this.btnPizzaOpslaan.TabIndex = 7;
             this.btnPizzaOpslaan.Text = "Pizza Opslaan";
             this.btnPizzaOpslaan.UseVisualStyleBackColor = true;
+            this.btnPizzaOpslaan.Click += new System.EventHandler(this.btnPizzaOpslaan_Click);
             // 
             // btnIngrediënten
             // 
@@ -181,6 +182,7 @@
             this.btnIngrediënten.TabIndex = 8;
             this.btnIngrediënten.Text = "Ingrediënt Toevoegen";
             this.btnIngrediënten.UseVisualStyleBackColor = true;
+            this.btnIngrediënten.Click += new System.EventHandler(this.btnIngrediënten_Click);
             // 
             // lblSamenstellen
             // 
@@ -235,9 +237,9 @@
             // 
             this.lbProducten.FormattingEnabled = true;
             this.lbProducten.ItemHeight = 16;
-            this.lbProducten.Location = new System.Drawing.Point(138, 471);
+            this.lbProducten.Location = new System.Drawing.Point(209, 471);
             this.lbProducten.Name = "lbProducten";
-            this.lbProducten.Size = new System.Drawing.Size(120, 84);
+            this.lbProducten.Size = new System.Drawing.Size(176, 84);
             this.lbProducten.TabIndex = 15;
             // 
             // lbIngrediënten
@@ -246,31 +248,8 @@
             this.lbIngrediënten.ItemHeight = 16;
             this.lbIngrediënten.Location = new System.Drawing.Point(12, 471);
             this.lbIngrediënten.Name = "lbIngrediënten";
-            this.lbIngrediënten.Size = new System.Drawing.Size(120, 84);
+            this.lbIngrediënten.Size = new System.Drawing.Size(191, 84);
             this.lbIngrediënten.TabIndex = 16;
-            // 
-            // checkedListBox1
-            // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
-            "Rond",
-            "Vierkant",
-            "Driehoek"});
-            this.checkedListBox1.Location = new System.Drawing.Point(13, 259);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(120, 89);
-            this.checkedListBox1.TabIndex = 17;
-            // 
-            // cblBodemsoort
-            // 
-            this.cblBodemsoort.FormattingEnabled = true;
-            this.cblBodemsoort.Items.AddRange(new object[] {
-            "Dun",
-            "Dik"});
-            this.cblBodemsoort.Location = new System.Drawing.Point(13, 142);
-            this.cblBodemsoort.Name = "cblBodemsoort";
-            this.cblBodemsoort.Size = new System.Drawing.Size(120, 89);
-            this.cblBodemsoort.TabIndex = 18;
             // 
             // clbOphalen
             // 
@@ -294,7 +273,7 @@
             // 
             // tbAdres
             // 
-            this.tbAdres.Location = new System.Drawing.Point(139, 646);
+            this.tbAdres.Location = new System.Drawing.Point(296, 649);
             this.tbAdres.Name = "tbAdres";
             this.tbAdres.Size = new System.Drawing.Size(100, 22);
             this.tbAdres.TabIndex = 21;
@@ -302,30 +281,11 @@
             // 
             // tbNaam
             // 
-            this.tbNaam.Location = new System.Drawing.Point(138, 618);
+            this.tbNaam.Location = new System.Drawing.Point(296, 621);
             this.tbNaam.Name = "tbNaam";
             this.tbNaam.Size = new System.Drawing.Size(100, 22);
             this.tbNaam.TabIndex = 22;
             this.tbNaam.Text = "Naam";
-            // 
-            // tbKlantNummer
-            // 
-            this.tbKlantNummer.Location = new System.Drawing.Point(139, 590);
-            this.tbKlantNummer.Name = "tbKlantNummer";
-            this.tbKlantNummer.Size = new System.Drawing.Size(100, 22);
-            this.tbKlantNummer.TabIndex = 23;
-            this.tbKlantNummer.Text = "Klantnummer";
-            // 
-            // cblGluten
-            // 
-            this.cblGluten.FormattingEnabled = true;
-            this.cblGluten.Items.AddRange(new object[] {
-            "Ja",
-            "Nee"});
-            this.cblGluten.Location = new System.Drawing.Point(139, 142);
-            this.cblGluten.Name = "cblGluten";
-            this.cblGluten.Size = new System.Drawing.Size(120, 89);
-            this.cblGluten.TabIndex = 24;
             // 
             // lblGluten
             // 
@@ -367,23 +327,12 @@
             this.cbAanpassen.Name = "cbAanpassen";
             this.cbAanpassen.Size = new System.Drawing.Size(121, 24);
             this.cbAanpassen.TabIndex = 28;
+            this.cbAanpassen.Text = "Standaard Pizza";
             this.cbAanpassen.SelectedIndexChanged += new System.EventHandler(this.cbAanpassen_SelectedIndexChanged);
-            // 
-            // clbAanpassen
-            // 
-            this.clbAanpassen.FormattingEnabled = true;
-            this.clbAanpassen.Items.AddRange(new object[] {
-            "Toevoegen",
-            "Aanpassen",
-            "Verwijderen"});
-            this.clbAanpassen.Location = new System.Drawing.Point(522, 58);
-            this.clbAanpassen.Name = "clbAanpassen";
-            this.clbAanpassen.Size = new System.Drawing.Size(120, 89);
-            this.clbAanpassen.TabIndex = 29;
             // 
             // tbNaamProduct
             // 
-            this.tbNaamProduct.Location = new System.Drawing.Point(395, 163);
+            this.tbNaamProduct.Location = new System.Drawing.Point(395, 117);
             this.tbNaamProduct.Name = "tbNaamProduct";
             this.tbNaamProduct.Size = new System.Drawing.Size(100, 22);
             this.tbNaamProduct.TabIndex = 31;
@@ -391,7 +340,7 @@
             // 
             // tbInkoop
             // 
-            this.tbInkoop.Location = new System.Drawing.Point(501, 163);
+            this.tbInkoop.Location = new System.Drawing.Point(395, 165);
             this.tbInkoop.Name = "tbInkoop";
             this.tbInkoop.Size = new System.Drawing.Size(100, 22);
             this.tbInkoop.TabIndex = 32;
@@ -399,7 +348,7 @@
             // 
             // tbVerkoop
             // 
-            this.tbVerkoop.Location = new System.Drawing.Point(607, 163);
+            this.tbVerkoop.Location = new System.Drawing.Point(501, 165);
             this.tbVerkoop.Name = "tbVerkoop";
             this.tbVerkoop.Size = new System.Drawing.Size(100, 22);
             this.tbVerkoop.TabIndex = 33;
@@ -419,16 +368,17 @@
             // 
             // btnAanpassen
             // 
-            this.btnAanpassen.Location = new System.Drawing.Point(395, 285);
+            this.btnAanpassen.Location = new System.Drawing.Point(443, 332);
             this.btnAanpassen.Name = "btnAanpassen";
             this.btnAanpassen.Size = new System.Drawing.Size(99, 23);
             this.btnAanpassen.TabIndex = 35;
             this.btnAanpassen.Text = "Aanpassen";
             this.btnAanpassen.UseVisualStyleBackColor = true;
+            this.btnAanpassen.Click += new System.EventHandler(this.btnAanpassen_Click);
             // 
             // btnToevoegen
             // 
-            this.btnToevoegen.Location = new System.Drawing.Point(502, 285);
+            this.btnToevoegen.Location = new System.Drawing.Point(550, 332);
             this.btnToevoegen.Name = "btnToevoegen";
             this.btnToevoegen.Size = new System.Drawing.Size(99, 23);
             this.btnToevoegen.TabIndex = 36;
@@ -437,23 +387,13 @@
             // 
             // btnVerwijderen
             // 
-            this.btnVerwijderen.Location = new System.Drawing.Point(607, 285);
+            this.btnVerwijderen.Location = new System.Drawing.Point(655, 332);
             this.btnVerwijderen.Name = "btnVerwijderen";
             this.btnVerwijderen.Size = new System.Drawing.Size(99, 23);
             this.btnVerwijderen.TabIndex = 37;
             this.btnVerwijderen.Text = "Verwijderen";
             this.btnVerwijderen.UseVisualStyleBackColor = true;
-            // 
-            // clbHalal
-            // 
-            this.clbHalal.FormattingEnabled = true;
-            this.clbHalal.Items.AddRange(new object[] {
-            "Ja",
-            "Nee"});
-            this.clbHalal.Location = new System.Drawing.Point(394, 218);
-            this.clbHalal.Name = "clbHalal";
-            this.clbHalal.Size = new System.Drawing.Size(100, 38);
-            this.clbHalal.TabIndex = 38;
+            this.btnVerwijderen.Click += new System.EventHandler(this.btnVerwijderen_Click);
             // 
             // lblHalal
             // 
@@ -473,34 +413,23 @@
             this.lblVeganistisch.TabIndex = 41;
             this.lblVeganistisch.Text = "Veganistisch";
             // 
-            // checkedListBox2
-            // 
-            this.checkedListBox2.FormattingEnabled = true;
-            this.checkedListBox2.Items.AddRange(new object[] {
-            "Ja",
-            "Nee"});
-            this.checkedListBox2.Location = new System.Drawing.Point(502, 218);
-            this.checkedListBox2.Name = "checkedListBox2";
-            this.checkedListBox2.Size = new System.Drawing.Size(100, 38);
-            this.checkedListBox2.TabIndex = 40;
-            // 
             // nUDLengteDiaAanpassen
             // 
-            this.nUDLengteDiaAanpassen.Location = new System.Drawing.Point(617, 234);
+            this.nUDLengteDiaAanpassen.Location = new System.Drawing.Point(447, 303);
             this.nUDLengteDiaAanpassen.Name = "nUDLengteDiaAanpassen";
             this.nUDLengteDiaAanpassen.Size = new System.Drawing.Size(47, 22);
             this.nUDLengteDiaAanpassen.TabIndex = 45;
             // 
             // nUDDiepteAanpassen
             // 
-            this.nUDDiepteAanpassen.Location = new System.Drawing.Point(718, 234);
+            this.nUDDiepteAanpassen.Location = new System.Drawing.Point(548, 303);
             this.nUDDiepteAanpassen.Name = "nUDDiepteAanpassen";
             this.nUDDiepteAanpassen.Size = new System.Drawing.Size(43, 22);
             this.nUDDiepteAanpassen.TabIndex = 44;
             // 
             // nUDBreedteAanpassen
             // 
-            this.nUDBreedteAanpassen.Location = new System.Drawing.Point(670, 234);
+            this.nUDBreedteAanpassen.Location = new System.Drawing.Point(500, 303);
             this.nUDBreedteAanpassen.Name = "nUDBreedteAanpassen";
             this.nUDBreedteAanpassen.Size = new System.Drawing.Size(42, 22);
             this.nUDBreedteAanpassen.TabIndex = 43;
@@ -508,7 +437,7 @@
             // lblFormaatAanpassen
             // 
             this.lblFormaatAanpassen.AutoSize = true;
-            this.lblFormaatAanpassen.Location = new System.Drawing.Point(614, 198);
+            this.lblFormaatAanpassen.Location = new System.Drawing.Point(444, 267);
             this.lblFormaatAanpassen.Name = "lblFormaatAanpassen";
             this.lblFormaatAanpassen.Size = new System.Drawing.Size(60, 17);
             this.lblFormaatAanpassen.TabIndex = 42;
@@ -519,7 +448,7 @@
             this.lblBestellingBekijken.AutoSize = true;
             this.lblBestellingBekijken.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBestellingBekijken.ForeColor = System.Drawing.Color.Black;
-            this.lblBestellingBekijken.Location = new System.Drawing.Point(391, 351);
+            this.lblBestellingBekijken.Location = new System.Drawing.Point(438, 382);
             this.lblBestellingBekijken.Name = "lblBestellingBekijken";
             this.lblBestellingBekijken.Size = new System.Drawing.Size(145, 17);
             this.lblBestellingBekijken.TabIndex = 46;
@@ -527,7 +456,7 @@
             // 
             // tbBestellingID
             // 
-            this.tbBestellingID.Location = new System.Drawing.Point(395, 377);
+            this.tbBestellingID.Location = new System.Drawing.Point(442, 408);
             this.tbBestellingID.Name = "tbBestellingID";
             this.tbBestellingID.Size = new System.Drawing.Size(100, 22);
             this.tbBestellingID.TabIndex = 47;
@@ -535,7 +464,7 @@
             // 
             // btnBestellingBekijken
             // 
-            this.btnBestellingBekijken.Location = new System.Drawing.Point(507, 373);
+            this.btnBestellingBekijken.Location = new System.Drawing.Point(554, 404);
             this.btnBestellingBekijken.Name = "btnBestellingBekijken";
             this.btnBestellingBekijken.Size = new System.Drawing.Size(135, 30);
             this.btnBestellingBekijken.TabIndex = 48;
@@ -545,7 +474,7 @@
             // lblBestellingKlaar
             // 
             this.lblBestellingKlaar.AutoSize = true;
-            this.lblBestellingKlaar.Location = new System.Drawing.Point(392, 412);
+            this.lblBestellingKlaar.Location = new System.Drawing.Point(439, 443);
             this.lblBestellingKlaar.Name = "lblBestellingKlaar";
             this.lblBestellingKlaar.Size = new System.Drawing.Size(204, 17);
             this.lblBestellingKlaar.TabIndex = 49;
@@ -553,14 +482,14 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(394, 471);
+            this.dateTimePicker1.Location = new System.Drawing.Point(441, 502);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(213, 22);
             this.dateTimePicker1.TabIndex = 50;
             // 
             // btnWinstOmzetBekijken
             // 
-            this.btnWinstOmzetBekijken.Location = new System.Drawing.Point(394, 499);
+            this.btnWinstOmzetBekijken.Location = new System.Drawing.Point(441, 530);
             this.btnWinstOmzetBekijken.Name = "btnWinstOmzetBekijken";
             this.btnWinstOmzetBekijken.Size = new System.Drawing.Size(135, 30);
             this.btnWinstOmzetBekijken.TabIndex = 51;
@@ -572,17 +501,193 @@
             this.lblWinstOmzet.AutoSize = true;
             this.lblWinstOmzet.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWinstOmzet.ForeColor = System.Drawing.Color.Black;
-            this.lblWinstOmzet.Location = new System.Drawing.Point(391, 451);
+            this.lblWinstOmzet.Location = new System.Drawing.Point(438, 482);
             this.lblWinstOmzet.Name = "lblWinstOmzet";
             this.lblWinstOmzet.Size = new System.Drawing.Size(184, 17);
             this.lblWinstOmzet.TabIndex = 52;
             this.lblWinstOmzet.Text = "Winst en omzet bekijken";
+            // 
+            // lblGebruiker
+            // 
+            this.lblGebruiker.AutoSize = true;
+            this.lblGebruiker.Location = new System.Drawing.Point(145, 564);
+            this.lblGebruiker.Name = "lblGebruiker";
+            this.lblGebruiker.Size = new System.Drawing.Size(126, 17);
+            this.lblGebruiker.TabIndex = 53;
+            this.lblGebruiker.Text = "Nieuwe gebruiker?";
+            // 
+            // clbGebruiker
+            // 
+            this.clbGebruiker.FormattingEnabled = true;
+            this.clbGebruiker.Items.AddRange(new object[] {
+            "Ja",
+            "Nee"});
+            this.clbGebruiker.Location = new System.Drawing.Point(148, 587);
+            this.clbGebruiker.Name = "clbGebruiker";
+            this.clbGebruiker.Size = new System.Drawing.Size(120, 89);
+            this.clbGebruiker.TabIndex = 54;
+            this.clbGebruiker.SelectedIndexChanged += new System.EventHandler(this.clbGebruiker_SelectedIndexChanged);
+            // 
+            // lblBodemsoortAanpassen
+            // 
+            this.lblBodemsoortAanpassen.AutoSize = true;
+            this.lblBodemsoortAanpassen.Location = new System.Drawing.Point(393, 145);
+            this.lblBodemsoortAanpassen.Name = "lblBodemsoortAanpassen";
+            this.lblBodemsoortAanpassen.Size = new System.Drawing.Size(84, 17);
+            this.lblBodemsoortAanpassen.TabIndex = 55;
+            this.lblBodemsoortAanpassen.Text = "Bodemsoort";
+            // 
+            // lblGlutenAanpassen
+            // 
+            this.lblGlutenAanpassen.AutoSize = true;
+            this.lblGlutenAanpassen.Location = new System.Drawing.Point(528, 145);
+            this.lblGlutenAanpassen.Name = "lblGlutenAanpassen";
+            this.lblGlutenAanpassen.Size = new System.Drawing.Size(68, 17);
+            this.lblGlutenAanpassen.TabIndex = 58;
+            this.lblGlutenAanpassen.Text = "Glutenvrij";
+            // 
+            // lblBodemVormAanpassen
+            // 
+            this.lblBodemVormAanpassen.AutoSize = true;
+            this.lblBodemVormAanpassen.Location = new System.Drawing.Point(645, 145);
+            this.lblBodemVormAanpassen.Name = "lblBodemVormAanpassen";
+            this.lblBodemVormAanpassen.Size = new System.Drawing.Size(83, 17);
+            this.lblBodemVormAanpassen.TabIndex = 60;
+            this.lblBodemVormAanpassen.Text = "Bodemvorm";
+            // 
+            // lblAlcohol
+            // 
+            this.lblAlcohol.AutoSize = true;
+            this.lblAlcohol.Location = new System.Drawing.Point(393, 198);
+            this.lblAlcohol.Name = "lblAlcohol";
+            this.lblAlcohol.Size = new System.Drawing.Size(54, 17);
+            this.lblAlcohol.TabIndex = 61;
+            this.lblAlcohol.Text = "Alcohol";
+            // 
+            // clbBodemVorm
+            // 
+            this.clbBodemVorm.FormattingEnabled = true;
+            this.clbBodemVorm.Items.AddRange(new object[] {
+            "Rond",
+            "Vierkant",
+            "Driehoek"});
+            this.clbBodemVorm.Location = new System.Drawing.Point(13, 259);
+            this.clbBodemVorm.Name = "clbBodemVorm";
+            this.clbBodemVorm.Size = new System.Drawing.Size(120, 89);
+            this.clbBodemVorm.TabIndex = 17;
+            this.clbBodemVorm.SelectedIndexChanged += new System.EventHandler(this.clbBodemVorm_SelectedIndexChanged);
+            // 
+            // cblGluten
+            // 
+            this.cblGluten.FormattingEnabled = true;
+            this.cblGluten.Items.AddRange(new object[] {
+            "Ja",
+            "Nee"});
+            this.cblGluten.Location = new System.Drawing.Point(139, 142);
+            this.cblGluten.Name = "cblGluten";
+            this.cblGluten.Size = new System.Drawing.Size(120, 89);
+            this.cblGluten.TabIndex = 24;
+            // 
+            // cblBodemsoort
+            // 
+            this.cblBodemsoort.FormattingEnabled = true;
+            this.cblBodemsoort.Items.AddRange(new object[] {
+            "Dun",
+            "Dik"});
+            this.cblBodemsoort.Location = new System.Drawing.Point(13, 142);
+            this.cblBodemsoort.Name = "cblBodemsoort";
+            this.cblBodemsoort.Size = new System.Drawing.Size(120, 89);
+            this.cblBodemsoort.TabIndex = 18;
+            // 
+            // clbHalalAlcohol
+            // 
+            this.clbHalalAlcohol.FormattingEnabled = true;
+            this.clbHalalAlcohol.Items.AddRange(new object[] {
+            "Ja",
+            "Nee"});
+            this.clbHalalAlcohol.Location = new System.Drawing.Point(394, 218);
+            this.clbHalalAlcohol.Name = "clbHalalAlcohol";
+            this.clbHalalAlcohol.Size = new System.Drawing.Size(100, 38);
+            this.clbHalalAlcohol.TabIndex = 38;
+            // 
+            // clbVega
+            // 
+            this.clbVega.FormattingEnabled = true;
+            this.clbVega.Items.AddRange(new object[] {
+            "Ja",
+            "Nee"});
+            this.clbVega.Location = new System.Drawing.Point(502, 218);
+            this.clbVega.Name = "clbVega";
+            this.clbVega.Size = new System.Drawing.Size(100, 38);
+            this.clbVega.TabIndex = 40;
+            // 
+            // clbAanpassen
+            // 
+            this.clbAanpassen.FormattingEnabled = true;
+            this.clbAanpassen.Items.AddRange(new object[] {
+            "Ja",
+            "Nee"});
+            this.clbAanpassen.Location = new System.Drawing.Point(522, 167);
+            this.clbAanpassen.Name = "clbAanpassen";
+            this.clbAanpassen.Size = new System.Drawing.Size(120, 89);
+            this.clbAanpassen.TabIndex = 57;
+            // 
+            // clbBodemAanpassen
+            // 
+            this.clbBodemAanpassen.FormattingEnabled = true;
+            this.clbBodemAanpassen.Items.AddRange(new object[] {
+            "Dun",
+            "Dik"});
+            this.clbBodemAanpassen.Location = new System.Drawing.Point(394, 167);
+            this.clbBodemAanpassen.Name = "clbBodemAanpassen";
+            this.clbBodemAanpassen.Size = new System.Drawing.Size(120, 89);
+            this.clbBodemAanpassen.TabIndex = 56;
+            // 
+            // nUDKlantnummer
+            // 
+            this.nUDKlantnummer.Location = new System.Drawing.Point(296, 621);
+            this.nUDKlantnummer.Name = "nUDKlantnummer";
+            this.nUDKlantnummer.Size = new System.Drawing.Size(120, 22);
+            this.nUDKlantnummer.TabIndex = 63;
+            // 
+            // lblKlantnummer
+            // 
+            this.lblKlantnummer.AutoSize = true;
+            this.lblKlantnummer.Location = new System.Drawing.Point(293, 601);
+            this.lblKlantnummer.Name = "lblKlantnummer";
+            this.lblKlantnummer.Size = new System.Drawing.Size(95, 17);
+            this.lblKlantnummer.TabIndex = 64;
+            this.lblKlantnummer.Text = "Klantnummer:";
+            // 
+            // clbVormAanpassen
+            // 
+            this.clbVormAanpassen.FormattingEnabled = true;
+            this.clbVormAanpassen.Items.AddRange(new object[] {
+            "Rond",
+            "Vierkant",
+            "Driehoek"});
+            this.clbVormAanpassen.Location = new System.Drawing.Point(648, 167);
+            this.clbVormAanpassen.Name = "clbVormAanpassen";
+            this.clbVormAanpassen.Size = new System.Drawing.Size(120, 89);
+            this.clbVormAanpassen.TabIndex = 65;
+            this.clbVormAanpassen.SelectedIndexChanged += new System.EventHandler(this.clbVormAanpassen_SelectedIndexChanged);
             // 
             // Pizzeria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(871, 717);
+            this.Controls.Add(this.clbVormAanpassen);
+            this.Controls.Add(this.lblKlantnummer);
+            this.Controls.Add(this.nUDKlantnummer);
+            this.Controls.Add(this.lblAlcohol);
+            this.Controls.Add(this.lblBodemVormAanpassen);
+            this.Controls.Add(this.lblGlutenAanpassen);
+            this.Controls.Add(this.clbAanpassen);
+            this.Controls.Add(this.clbBodemAanpassen);
+            this.Controls.Add(this.lblBodemsoortAanpassen);
+            this.Controls.Add(this.clbGebruiker);
+            this.Controls.Add(this.lblGebruiker);
             this.Controls.Add(this.lblWinstOmzet);
             this.Controls.Add(this.btnWinstOmzetBekijken);
             this.Controls.Add(this.dateTimePicker1);
@@ -595,9 +700,9 @@
             this.Controls.Add(this.nUDBreedteAanpassen);
             this.Controls.Add(this.lblFormaatAanpassen);
             this.Controls.Add(this.lblVeganistisch);
-            this.Controls.Add(this.checkedListBox2);
+            this.Controls.Add(this.clbVega);
             this.Controls.Add(this.lblHalal);
-            this.Controls.Add(this.clbHalal);
+            this.Controls.Add(this.clbHalalAlcohol);
             this.Controls.Add(this.btnVerwijderen);
             this.Controls.Add(this.btnToevoegen);
             this.Controls.Add(this.btnAanpassen);
@@ -605,19 +710,17 @@
             this.Controls.Add(this.tbVerkoop);
             this.Controls.Add(this.tbInkoop);
             this.Controls.Add(this.tbNaamProduct);
-            this.Controls.Add(this.clbAanpassen);
             this.Controls.Add(this.cbAanpassen);
             this.Controls.Add(this.lblSoortAanpassen);
             this.Controls.Add(this.lblProductenAanpassen);
             this.Controls.Add(this.lblGluten);
             this.Controls.Add(this.cblGluten);
-            this.Controls.Add(this.tbKlantNummer);
             this.Controls.Add(this.tbNaam);
             this.Controls.Add(this.tbAdres);
             this.Controls.Add(this.lblVorm);
             this.Controls.Add(this.clbOphalen);
             this.Controls.Add(this.cblBodemsoort);
-            this.Controls.Add(this.checkedListBox1);
+            this.Controls.Add(this.clbBodemVorm);
             this.Controls.Add(this.lbIngrediënten);
             this.Controls.Add(this.lbProducten);
             this.Controls.Add(this.nUDLengteDiameter);
@@ -638,12 +741,14 @@
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Name = "Pizzeria";
             this.Text = "Pizzeria";
+            this.Load += new System.EventHandler(this.Pizzeria_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nUDBreedte)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUDDiepte)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUDLengteDiameter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUDLengteDiaAanpassen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUDDiepteAanpassen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUDBreedteAanpassen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nUDKlantnummer)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -668,19 +773,14 @@
         private System.Windows.Forms.NumericUpDown nUDLengteDiameter;
         private System.Windows.Forms.ListBox lbProducten;
         private System.Windows.Forms.ListBox lbIngrediënten;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
-        private System.Windows.Forms.CheckedListBox cblBodemsoort;
         private System.Windows.Forms.CheckedListBox clbOphalen;
         private System.Windows.Forms.Label lblVorm;
         private System.Windows.Forms.TextBox tbAdres;
         private System.Windows.Forms.TextBox tbNaam;
-        private System.Windows.Forms.TextBox tbKlantNummer;
-        private System.Windows.Forms.CheckedListBox cblGluten;
         private System.Windows.Forms.Label lblGluten;
         private System.Windows.Forms.Label lblProductenAanpassen;
         private System.Windows.Forms.Label lblSoortAanpassen;
         private System.Windows.Forms.ComboBox cbAanpassen;
-        private System.Windows.Forms.CheckedListBox clbAanpassen;
         private System.Windows.Forms.TextBox tbNaamProduct;
         private System.Windows.Forms.TextBox tbInkoop;
         private System.Windows.Forms.TextBox tbVerkoop;
@@ -688,10 +788,8 @@
         private System.Windows.Forms.Button btnAanpassen;
         private System.Windows.Forms.Button btnToevoegen;
         private System.Windows.Forms.Button btnVerwijderen;
-        private System.Windows.Forms.CheckedListBox clbHalal;
         private System.Windows.Forms.Label lblHalal;
         private System.Windows.Forms.Label lblVeganistisch;
-        private System.Windows.Forms.CheckedListBox checkedListBox2;
         private System.Windows.Forms.NumericUpDown nUDLengteDiaAanpassen;
         private System.Windows.Forms.NumericUpDown nUDDiepteAanpassen;
         private System.Windows.Forms.NumericUpDown nUDBreedteAanpassen;
@@ -703,6 +801,22 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button btnWinstOmzetBekijken;
         private System.Windows.Forms.Label lblWinstOmzet;
+        private System.Windows.Forms.Label lblGebruiker;
+        private System.Windows.Forms.CheckedListBox clbGebruiker;
+        private System.Windows.Forms.Label lblBodemsoortAanpassen;
+        private System.Windows.Forms.Label lblGlutenAanpassen;
+        private System.Windows.Forms.Label lblBodemVormAanpassen;
+        private System.Windows.Forms.Label lblAlcohol;
+        private System.Windows.Forms.CheckedListBox clbBodemVorm;
+        private System.Windows.Forms.CheckedListBox cblGluten;
+        private System.Windows.Forms.CheckedListBox cblBodemsoort;
+        private System.Windows.Forms.CheckedListBox clbHalalAlcohol;
+        private System.Windows.Forms.CheckedListBox clbVega;
+        private System.Windows.Forms.CheckedListBox clbAanpassen;
+        private System.Windows.Forms.CheckedListBox clbBodemAanpassen;
+        private System.Windows.Forms.NumericUpDown nUDKlantnummer;
+        private System.Windows.Forms.Label lblKlantnummer;
+        private System.Windows.Forms.CheckedListBox clbVormAanpassen;
     }
 }
 
